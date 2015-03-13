@@ -1239,9 +1239,12 @@ function renderRelatedToObjects(element) {
                             var label = data[x].relatedObjects[z].label;
 
                             if (z == 10 & data[x].relatedObjects.length > 10) {
+                            	var xlen = data[x].relatedObjects.length;
                                 list.append("<li class='more'>more...</li>").click(function() {
                                     $('ul li.more').remove();
-                                    $('ul li:gt('+z+')').show();
+                                    for(var zz = 10; zz < xlen; zz++){
+                                    	$('ul li:gt('+zz+')').show();
+                                    }
                                 });
                                 maxReached = true
                             }
@@ -1372,9 +1375,12 @@ function renderRelatedFromSubjects(element) {
                             var label = data[x].relatedObjects[z].label;
 
                             if (z == 10 & data[x].relatedObjects.length > 10) {
+                            	var xlen = data[x].relatedObjects.length;
                                 list.append("<li class='more'>more...</li>").click(function() {
                                     $('ul li.more').remove();
-                                    $('ul li:gt('+z+')').show();
+                                    for(var zz = 10; zz < xlen; zz++){
+                                    	$('ul li:gt('+zz+')').show();
+                                    }
                                 });
                                 maxReached = true
                             }
