@@ -1470,7 +1470,7 @@ function setNamespaces (namespaces) {
 }
 
 function _betterUnescape (s) {
-    return unescape(s.replace(/\+/g, ' '));
+    return decodeURIComponent(s.replace(/\+/g, ' '));
 }
 
 function resetPage() {
